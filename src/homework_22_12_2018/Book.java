@@ -17,13 +17,13 @@ public abstract class Book {
 		return bookName;
 	}
 	public void setBookName(String bookName) {
-		this.bookName = bookName;
+		Book.bookName = bookName;
 	}
 	public int getNoOfPages() {
 		return noOfPages;
 	}
 	public void setNoOfPages(int noOfPages) {
-		this.noOfPages = noOfPages;
+		Book.noOfPages = noOfPages;
 	}
 	
 	
