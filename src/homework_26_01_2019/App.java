@@ -1,8 +1,9 @@
 package homework_26_01_2019;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
-
-
 
 class Matrix {
 	static int[][] myArray = new int[5][5];
@@ -18,26 +19,23 @@ class Matrix {
 			}
 
 		}
-		
-		System.out.println(myArray.length);
+
 	}
 
 	// iterating into the array to check if the numbers where added
-	/*
-	 * void iteratateMatrix() {
-	 * 
-	 * for (int i = 0; i < myArray.length; i++) {
-	 * 
-	 * for (int j = 0; j < myArray[i].length; j++) {
-	 * System.out.println("Values at arr[" + i + "][" + j + "] is " +
-	 * myArray[i][j]);
-	 * 
-	 * }
-	 * 
-	 * }
-	 * 
-	 * }
-	 */
+
+	void iteratateMatrix() {
+
+		for (int i = 0; i < myArray.length; i++) {
+
+			for (int j = 0; j < myArray[i].length; j++) {
+				System.out.println("Values at array[" + i + "][" + j + "] is " + myArray[i][j]);
+
+			}
+
+		}
+
+	}
 
 	// iterating through the first line of the array
 	// we can use the above iteration without the line j.
@@ -48,7 +46,7 @@ class Matrix {
 
 			int i = 0;
 
-			System.out.println("Values at arr[" + i + "][" + j + "] is " + myArray[i][j]);
+			System.out.println("Values at array[" + i + "][" + j + "] is " + myArray[i][j]);
 
 		}
 
@@ -61,28 +59,61 @@ class Matrix {
 	 * 40 41 42 43 44
 	 */
 
+	void sumOfMainDiagonal() {
 
-	
-	/*void sumOfMainDiagonal(){
-		
-		for ( int i = 0; i < myArray.length-1; i++) {
-			for ( int j = 0 ; j< myArray.length-1; j++){
-				
-				
-			}
+		int sum = 0;
+
+		for (int i = 0; i <= myArray.length - 1; i++) {
+			sum += myArray[i][i];
+
 		}
-		
-	}*/
+
+		System.out.println("Sum of the fist principal diagonal is " + sum);
+	}
+
+	void sumOf4thMainDiagonal() {
+		int y = myArray[myArray.length - 2][0];
+		int x = myArray[myArray.length - 1][1];
+		int sum = x + y;
+
+		System.out.println("Sum of the 4th Main Diagonal " + sum);
+		System.out.println("The biggest number in the 4th Main Diagonal is " + Math.max(x, y));
+
+	}
+
+	void sumOfTheFirstSecondaryDiagonal() {
+		int sum = 0;
+		int j = myArray.length - 1;
+		List<Integer> list = new ArrayList<Integer>();
+		for (int i = 0; i <= myArray.length - 1; i++) {
+
+			// System.out.println("j =" + j); -- used for debug
+
+			sum += myArray[i][j];
+			list.add(myArray[i][j]);
+			// System.out.println("my array " + myArray[i][j]); -- used for debug
+
+			j--;
+
+		}
+
+		System.out.println("Sum of the first Secondary diagonal is " + sum);
+
+		System.out.println("Biggest number from first Secondary diagonal is " + Collections.max(list));
+	}
+
 }
 
 public class App {
 
 	public static void main(String arg[]) {
-		
-		Matrix matrix = new Matrix ();
+
+		Matrix matrix = new Matrix();
 		matrix.createMatrix();
-		
-	
+		// matrix.iteratateMatrix();
+		matrix.displayFirstRow();
+		matrix.sumOfTheFirstSecondaryDiagonal();
+		matrix.sumOf4thMainDiagonal();
 
 	}
 }
