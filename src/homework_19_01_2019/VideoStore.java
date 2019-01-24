@@ -2,22 +2,21 @@ package homework_19_01_2019;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class VideoStore {
 
 	List<Video> myVideoList = new ArrayList<>();
 
-	Scanner sc = new Scanner(System.in);
-
 	public void addVideo(String videoTitle) {
 		Video video = new Video(videoTitle);
+		
 
 		myVideoList.add(video);
 
 	}
 
 	public void checkOut(String videoTitle) {
+
 		for (Video video : myVideoList) {
 			if (video.getVideoTitle().equals(videoTitle)) {
 				video.setVideoInStore(true);
@@ -26,6 +25,7 @@ public class VideoStore {
 	}
 
 	public void returnVideo(String videoTitle) {
+
 		for (Video video : myVideoList) {
 			if (video.getVideoTitle().equals(videoTitle)) {
 				video.setVideoInStore(false);
@@ -36,7 +36,7 @@ public class VideoStore {
 	public void receiveRating(String videoTitle, int rating) {
 		for (Video video : myVideoList) {
 			if (video.getVideoTitle().equals(videoTitle)) {
-				video.setRating(video.getRating() + sc.nextInt());
+				video.setRating(video.getRating() + 1);
 				video.setTotalNoRatings(video.getTotalNoRatings() + rating);
 				video.setAverageUserRating((video.getTotalNoRatings() / video.getRating()));
 
