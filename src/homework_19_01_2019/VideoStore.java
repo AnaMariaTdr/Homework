@@ -9,10 +9,7 @@ public class VideoStore {
 
 	public void addVideo(String videoTitle) {
 		Video video = new Video(videoTitle);
-		
-
 		myVideoList.add(video);
-
 	}
 
 	public void checkOut(String videoTitle) {
@@ -47,13 +44,11 @@ public class VideoStore {
 
 	public void listInventory() {
 		for (Video video : myVideoList) {
-
 			StringBuilder sb = new StringBuilder();
-
 			sb.append(myVideoList.indexOf(video) + 1);
-			sb.append(video.getVideoTitle());
-			sb.append("with average rating of : " + video.getAverageUserRating());
-
+			sb.append(". Title: "+video.getVideoTitle());
+			sb.append("\tAverage rating of : " + video.getAverageUserRating());
+			System.out.println(sb.toString()); //tb printat cumva, daca metoda intoarce void
 		}
 
 	}
