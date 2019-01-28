@@ -8,21 +8,21 @@ public abstract class Car implements Vehicle {
 	private final double declaredConsumptionPer100Km;
 	private double availableFuel;
 	private int currentGear;
-	private boolean engineOn = false;
+	private boolean engineOn;
 	private double averageFuelConsumption;
 	private double cruiseKm;
 	private double fuelConsumed;
 	private double tempFuelConsumed;
 	public double adjustConsumption;
 
-	public Car(int fuelTankSize, double availableFuel2, String fuelType, int gears, double d, String chassisNumber) {
+	public Car(int fuelTankSize, double availableFuel, String fuelType, int totalGears, double d, String chassisNumber) {
 		this.fuelTankSize = fuelTankSize;
 		this.fuelType = fuelType;
-		this.gears = gears;
+		this.gears = totalGears;
 		this.declaredConsumptionPer100Km = d;
-		if (availableFuel2 <= fuelTankSize && availableFuel2 >= 0) {
-			this.availableFuel = availableFuel2;
-		} else if (availableFuel2 < 0) {
+		if (availableFuel <= fuelTankSize && availableFuel >= 0) {
+			this.availableFuel = availableFuel;
+		} else if (availableFuel < 0) {
 			this.availableFuel = 0;
 		} else {
 			this.availableFuel = fuelTankSize;
