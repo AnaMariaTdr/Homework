@@ -17,7 +17,6 @@ public class App19_01_2019 {
 		videoStore.receiveRating("Godfather II", 9);
 		videoStore.receiveRating("Godfather II", 9);
 		videoStore.checkOut("Godfather II");
-		videoStore.listInventory();
 		videoStore.returnVideo("Godfather II");
 
 		videoStore.addVideo("Star Wars Episode IV: A New Hope");
@@ -26,6 +25,7 @@ public class App19_01_2019 {
 		videoStore.receiveRating("Star Wars Episode IV: A New Hope", 7);
 		videoStore.checkOut("Star Wars Episode IV: A New Hope");
 		videoStore.returnVideo("Star Wars Episode IV: A New Hope");
+		videoStore.listInventory(); //cred ca metoda e suficient sa fie apelata o singura data, la final
 
 	}
 
