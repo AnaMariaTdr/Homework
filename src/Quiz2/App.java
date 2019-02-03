@@ -1,5 +1,6 @@
 package Quiz2;
 
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 
 public class App {
@@ -40,10 +41,8 @@ public class App {
 	}
 
 	static void addRectangle() {
-		int a = 0;
-		int b = 0;
 
-		rectangleSet.add(new Rectangle(a, b));
+		rectangleSet.add(new Rectangle(12, 13));
 
 	}
 

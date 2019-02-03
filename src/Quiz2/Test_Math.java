@@ -1,7 +1,6 @@
 package Quiz2;
 
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.fail;
 
 import java.util.LinkedHashSet;
 
