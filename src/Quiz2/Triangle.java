@@ -8,6 +8,14 @@ public class Triangle implements Interface_Math{
 	private int AD;
 	private int area; 
 	private int perimeter;
+	
+	@Override
+	public String toString() {
+		return "Triangle [AB=" + AB + ", BC=" + BC + ", AC=" + AC + ", AD=" + AD + ", area=" + area + ", perimeter="
+				+ perimeter + "]";
+	}
+
+
 	public Triangle(int aB, int bC, int aC, int aD) {
 		super();
 		AB = aB;

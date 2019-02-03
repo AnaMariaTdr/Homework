@@ -7,6 +7,13 @@ public class Circle implements Interface_Math {
 	private int perimeter;
 	
 	
+	
+	
+
+	@Override
+	public String toString() {
+		return "Circle [r=" + r + ", area=" + area + ", perimeter=" + perimeter + "]";
+	}
 
 	public int getArea() {
 		return area;

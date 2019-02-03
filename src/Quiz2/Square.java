@@ -7,6 +7,13 @@ public class Square implements Interface_Math{
 	public int perimeter;
 	
 	
+	
+	
+
+	@Override
+	public String toString() {
+		return "Square [AB=" + AB + ", area=" + area + ", perimeter=" + perimeter + "]";
+	}
 
 	public int getArea() {
 		return area;

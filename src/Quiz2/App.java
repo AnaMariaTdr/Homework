@@ -17,6 +17,28 @@ public class App {
 
 	}
 
+	static void iterateRectangle() {
+
+		rectangleSet.iterator();
+
+	}
+
+	static void iterateTriangle() {
+		triangleSet.iterator();
+
+	}
+
+	static void iterateSquare() {
+		squareSet.iterator();
+
+	}
+
+	static void iterateCircle() {
+
+		circleSet.iterator();
+
+	}
+
 	static void addRectangle() {
 		int a = 0;
 		int b = 0;

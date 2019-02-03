@@ -6,6 +6,11 @@ public class Rectangle implements Interface_Math {
 	private int area;
 	private int perimeter;
 
+	@Override
+	public String toString() {
+		return "Rectangle [AB=" + AB + ", CD=" + CD + ", area=" + area + ", perimeter=" + perimeter + "]";
+	}
+
 	public Rectangle(int aB, int cD) {
 		super();
 		AB = aB;
