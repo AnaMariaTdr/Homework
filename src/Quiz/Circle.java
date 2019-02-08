@@ -12,7 +12,9 @@ public class Circle {
 	public int area;
 	public int perimeter;
 
-
+	public Circle() {
+		super();
+	}
 
 	public double calculateSurface(int h) {
 		// TODO Auto-generated method stub

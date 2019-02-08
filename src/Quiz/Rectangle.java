@@ -12,9 +12,9 @@ public class Rectangle {
 	public int area;
 	public int perimeter;
 	
-	
-
-	
+	public Rectangle() {
+		super();
+	}
 
 	public int calculateSurface(int h, int w) {
 		// TODO Auto-generated method stub

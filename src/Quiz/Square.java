@@ -11,7 +11,9 @@ public class Square {
 	public int area;
 	public int perimeter;
 	
-	
+	public Square() {
+		super();
+	}
 
 	public int calculateSurface(int h) {
 		// TODO Auto-generated method stub

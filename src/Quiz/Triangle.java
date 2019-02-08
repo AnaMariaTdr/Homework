@@ -13,7 +13,9 @@ public class Triangle {
 	public int area;
 	public int perimeter;
 
-
+	public Triangle() {
+		super();
+	}
 
 	public int calculateSurface(int h, int l) {
 		// TODO Auto-generated method stub
