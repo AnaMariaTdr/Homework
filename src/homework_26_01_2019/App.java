@@ -107,7 +107,7 @@ class Matrix {
 public class App {
 
 	public static void main(String arg[]) {
-
+		//as fi vrut sa creezi teste pentru metodele astea, in loc sa le apelezi in main :D
 		Matrix matrix = new Matrix();
 		matrix.createMatrix();
 		// matrix.iteratateMatrix();

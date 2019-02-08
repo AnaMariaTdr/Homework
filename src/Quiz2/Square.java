@@ -5,10 +5,6 @@ public class Square implements Interface_Math{
 	public int AB;
 	public int area; 
 	public int perimeter;
-	
-	
-	
-	
 
 	@Override
 	public String toString() {
