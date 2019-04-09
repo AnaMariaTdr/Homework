@@ -60,12 +60,18 @@ public class Samsung extends Telephone {
 	@Override
 	public void call(int phoneNumber) {
 		callingHistorySamsung.put(phoneNumber, "Inbound call");
+		batteryLife = batteryLife -20;
 	}
 
 	@Override
 	public void viewHistory() {
 		toString();
 		callingHistorySamsung.entrySet().stream().forEach(e -> System.out.println(e));
+	}
+
+	@Override
+	public void recharge() {
+		batteryLife = 100;
 	}
 
 }

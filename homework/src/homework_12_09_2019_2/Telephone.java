@@ -38,6 +38,10 @@ public abstract class Telephone {
 	
 
 	}
+	
+	public void recharge() {
+		
+	}
 
 	public Map<Integer, Contacts> getTelephoneBook() {
 		return telephoneBook;
