@@ -6,11 +6,11 @@ import java.util.TreeMap;
 public abstract class Telephone {
 
 	int phoneNumber;
-	protected Map<Integer, Contacts> telephoneBook = new TreeMap<>();
+	protected Map<String, Contacts> telephoneBook = new TreeMap<>();
 
 	// phone number and contacts
 
-	public void addToContacts(int phoneNumber, String firstName, String lastName) {
+	public void addToContacts(String phoneNumber, String firstName, String lastName) {
 
 	}
 
@@ -21,33 +21,40 @@ public abstract class Telephone {
 
 	// messages
 
-	public void sentMessage(int phoneNumber, String message) {
+	public void sentMessage(Contacts contacts, String message) {
 
 	}
-	
-	//calling 
-	
-	public void call(int phoneNumber) {
-		
+
+	// calling
+
+	public void call(String phoneNumber) {
+
 	}
+
 	public void viewHistory() {
-		
+
 	}
-	
+
 	public void listMessageHistory() {
-	
 
 	}
-	
+
 	public void recharge() {
-		
+
 	}
 
-	public Map<Integer, Contacts> getTelephoneBook() {
+	public Map<String, Contacts> getTelephoneBook() {
 		return telephoneBook;
 	}
 
-	public void setTelephoneBook(Map<Integer, Contacts> telephoneBook) {
+	public void setTelephoneBook(Map<String, Contacts> telephoneBook) {
 		this.telephoneBook = telephoneBook;
 	}
+
+	public void sentMessage(String phoneNumber, String message) {
+		// TODO Auto-generated method stub
+
+	}
+
+	protected abstract void tostringy();
 }

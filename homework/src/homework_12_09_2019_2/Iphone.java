@@ -8,14 +8,14 @@ public class Iphone extends Telephone {
 	private final String phoneNumberIphone = "074728573029";
 	private int batteryLife = 100;
 
-	Map<Integer, String> messagesHistoryIphone = new HashMap<>();
-	Map<Integer, String> callingHistoryIphone = new HashMap<>();
+	Map<String, String> messagesHistoryIphone = new HashMap<>();
+	Map<String, String> callingHistoryIphone = new HashMap<>();
 
 	@Override
-	public void addToContacts(int phoneNumber, String firstName, String lastName) {
+	public void addToContacts(String phoneNumber, String firstName, String lastName) {
 
 		phoneNumber ph = new phoneNumber();
-		boolean check = ph.checkPhoneNumber(Integer.toString(phoneNumber));
+		boolean check = ph.checkPhoneNumber(phoneNumber);
 
 		if (check == true) {
 			Contacts contact = new Contacts(firstName, lastName);
@@ -26,7 +26,7 @@ public class Iphone extends Telephone {
 	}
 
 	@Override
-	public void sentMessage(int phoneNumber, String message) {
+	public void sentMessage(String phoneNumber, String message) {
 		// TODO Auto-generated method stub
 		super.sentMessage(phoneNumber, message);
 
@@ -48,18 +48,18 @@ public class Iphone extends Telephone {
 
 	@Override
 	public void listMessageHistory() {
-		toString();
+		tostringy();
 		messagesHistoryIphone.entrySet().stream().forEach(e -> System.out.println(e));
 	}
 
-	@Override
-	public String toString() {
-		return "Iphone [phoneNumberIphone=" + phoneNumberIphone + ", batteryLife=" + batteryLife + "]";
+	public void tostringy() {
+		System.out.println("Iphone [phoneNumber =" + phoneNumberIphone + ", batteryLife=" + batteryLife + "]");
 	}
 
 	@Override
-	public void call(int phoneNumber) {
+	public void call(String phoneNumber) {
 		callingHistoryIphone.put(phoneNumber, "Inbound call");
+		System.out.println("Calling from iphone.... ");
 		batteryLife = batteryLife - 20;
 	}
 
