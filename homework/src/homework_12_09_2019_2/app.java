@@ -5,6 +5,6 @@ import java.util.TreeMap;
 
 public class app {
 	public static void main(String[] args) {
-		Map<Integer, Contacts> telephoneBook = new TreeMap<>();
+		
 	}
 }
