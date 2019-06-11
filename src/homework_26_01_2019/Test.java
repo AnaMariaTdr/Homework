@@ -1,11 +1,10 @@
 package homework_26_01_2019;
 
-import static org.junit.Assert.*;
-
 public class Test {
 
 	@org.junit.Test
 	public void addNumbersToMatrix() {
+		@SuppressWarnings("unused")
 		Matrix matrix = new Matrix();
 
 	}
